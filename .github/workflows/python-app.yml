@@ -41,7 +41,7 @@ jobs:
       run: |
         echo "Il valore è $PYTEST_OUTPUT"
 
-    - name: Send test results to webhook
+    - name: Send test results to webhook 
       run: |
         curl -X POST -H "Content-Type: application/json" -d '{"tests_output": "'"$PYTEST_OUTPUT"'", "students_email": "'"$GITHUB_ACTOR"'", "repo":  "'"$GITHUB_REPOSITORY"'"}' https://smee.io/OWXw2SgOZhTJX1c
 
