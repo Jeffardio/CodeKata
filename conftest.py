@@ -1,6 +1,5 @@
-import pytest
-import os
 
+import json
 
 def pytest_sessionfinish(session, exitstatus):
     """ whole test run finishes. """
@@ -11,5 +10,5 @@ def pytest_sessionfinish(session, exitstatus):
         "tests_collected": tests_collected,
         
     }
-    print("\n",output)
+    print("\n",json.dumps(output) )
 
