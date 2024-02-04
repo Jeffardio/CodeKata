@@ -10,5 +10,5 @@ def pytest_sessionfinish(session, exitstatus):
         "tests_collected": tests_collected,
         
     }
-    print("\n",json.dumps(output) )
+    print("\n",output )
 
