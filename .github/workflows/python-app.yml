@@ -43,7 +43,7 @@ jobs:
 
     - name: Send test results to webhook
       run: |
-        curl -X POST -H "Content-Type: application/json" -d '{"key": "'"$MY_VARIABLE"'"}' https://smee.io/OWXw2SgOZhTJX1c
+        curl -X POST -H "Content-Type: application/json" -d '{"key": "'"$PYTEST_OUTPUT"'"}' https://smee.io/OWXw2SgOZhTJX1c
 
       
 
