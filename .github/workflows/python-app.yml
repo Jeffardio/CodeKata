@@ -36,7 +36,10 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        echo "pytest_output=$(pytest | grep 'tests_failed.*tests_collected')"  >> "$GITHUB_ENV"
+        echo "PYTEST_OUTPUT=$(pytest | grep 'tests_failed.*tests_collected')"  >> "$GITHUB_ENV"
+    - name: Verify
+      run: |
+        echo "Il valore è $PYTEST_OUTPUT"
 
   
   notify:
