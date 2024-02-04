@@ -45,7 +45,7 @@ jobs:
     steps:
       - name: verify
         run: |
-          echo "$GITHUB_ENV"
+          echo "$pytest_output"
 
 
 
