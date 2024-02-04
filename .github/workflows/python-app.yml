@@ -37,7 +37,7 @@ jobs:
     - name: Test with pytest
       run: |
         echo "pytest_output=$(pytest | grep 'tests_failed.*tests_collected')"  >> "$GITHUB_ENV"
-"
+
   
   notify:
     needs: build
