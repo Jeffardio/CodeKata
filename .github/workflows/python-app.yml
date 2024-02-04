@@ -41,14 +41,14 @@ jobs:
       run: |
         echo "Il valore è $PYTEST_OUTPUT"
 
+    - name: Send test results to webhook
+      run: |
+        curl -X POST -H "Content-Type: application/json" -d '$PYTEST_OUTPUT' https://example.com
+
+      
+
   
-  notify:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: verify
-        run: |
-          echo "$pytest_output"
+  
 
 
 
